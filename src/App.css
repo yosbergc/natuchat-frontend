@@ -13,13 +13,5 @@ main {
   min-height: 80vh;
   position: relative;
   min-width: 320px;
-  max-width: 500px;
-}
-.chat-messages {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  overflow: auto;
-  max-height: 100%;
-  padding: 10px 20px 50px 0px;
+  max-width: 400px;
 }
