@@ -10,13 +10,13 @@ function useChat() {
     })
 
     const [chat, setChat] = useState([])
-
+    const [showNotification, setShowNotification] = useState(false)
     function sendMessage(message: string) {
         socket.emit("chat message", message)
     }
 
     sendMessage('Hola mundo')
-    return { chat, setChat }
+    return { chat, setChat, showNotification }
 }
 
 export { useChat }

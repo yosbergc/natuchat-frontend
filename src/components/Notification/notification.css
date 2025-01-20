@@ -1,0 +1,14 @@
+.notification-bar {
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    bottom: 0px;
+}
+.green {
+    background-color: rgb(123, 204, 3);
+}
+.red {
+    background-color: rgb(177, 57, 2);
+    color: white;
+}
