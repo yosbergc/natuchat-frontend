@@ -5,13 +5,13 @@ import { ChatMessages } from './components/ChatMessages/ChatMessages'
 import { Notification } from './components/Notification/Notification'
 
 function App() {
-  const { chat, setChat, notification } = useChat()
+  const { chat, notification, sendMessage } = useChat()
   return (
     <>  
       <main>
         <section className="chat-container">
-          <ChatMessages />
-          <SendMessage />
+          <ChatMessages chat={chat}/>
+          <SendMessage sendMessage={sendMessage}/>
         </section>
         {
           notification.show && <Notification connection={notification.state} />
