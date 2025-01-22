@@ -1,9 +1,8 @@
-import React from "react"
-import { useContext } from "react"
+import { ReactNode, useContext } from "react"
 import { UserContext } from '../../context/UserContext'
 import { Navigate } from "react-router"
 
-function ProtectedRoute({ children } : { children: typeof React.Children }) {
+function ProtectedRoute({ children } : { children: ReactNode}) {
     const { user } = useContext(UserContext)
     if (user?.token) {
         return children;
