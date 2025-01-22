@@ -5,3 +5,11 @@ export type Message = {
 }
 
 export type ChatState = Message[]
+
+interface UserLogged {
+    id: number,
+    user: string,
+    token: string
+}
+
+export type User = UserLogged | null;
