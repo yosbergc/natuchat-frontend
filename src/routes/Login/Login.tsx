@@ -16,6 +16,7 @@ function Login() {
 
         if (usernameRef.current.value === '' || passwordRef.current.value === '') {
             toast.error('Debes rellenar ambos campos para poder iniciar sesión.')
+            return;
         }
 
         try {

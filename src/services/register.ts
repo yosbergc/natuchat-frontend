@@ -1,5 +1,5 @@
 function registerService(username: string, email: string, password: string) {
-    return fetch('http://127.0.0.1:5000/auth/register', {
+    return fetch('https://natuchat.vercel.app/auth/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

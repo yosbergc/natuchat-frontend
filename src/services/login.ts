@@ -1,5 +1,5 @@
 function loginService(username: string, password: string) {
-    return fetch('http://127.0.0.1:5000/auth', {
+    return fetch('https://natuchat.vercel.app/auth', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
