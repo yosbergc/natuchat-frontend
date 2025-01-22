@@ -11,7 +11,7 @@ function Login() {
     const { setUser } = useContext(UserContext)
     async function handleLogin(e: FormEvent<HTMLFormElement>) {
         e.preventDefault()
-
+        
         if (usernameRef.current === null || passwordRef.current === null) return;
 
         if (usernameRef.current.value === '' || passwordRef.current.value === '') {

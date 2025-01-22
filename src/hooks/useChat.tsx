@@ -1,20 +1,22 @@
 import { Manager } from "socket.io-client";
 import { useState, useMemo } from "react";
 import { ChatState, Message } from "../types";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 function useChat() {
     const [chat, setChat] = useState<ChatState>([])
-
+    const { user } = useContext(UserContext)
     const { socket } = useMemo(() => {
         const manager = new Manager('ws://localhost:5000')
         const socket = manager.socket('/', {
         auth: {
-            user: 'yosber',
+            user: user?.user,
             lastMessage: 0
         }
         })
         
         return { socket }
-    }, [])
+    }, [user])
     
     socket.on('chat message', (message: Message) => {
         const newChat = [...chat]
