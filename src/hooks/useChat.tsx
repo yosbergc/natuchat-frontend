@@ -7,7 +7,7 @@ function useChat() {
     const [chat, setChat] = useState<ChatState>([])
     const { user } = useContext(UserContext)
     const { socket } = useMemo(() => {
-        const manager = new Manager('ws://localhost:5000')
+        const manager = new Manager('ws://natuchat-5rd9oadq6-yosber-guerreros-projects.vercel.app/')
         const socket = manager.socket('/', {
         auth: {
             user: user?.user,
