@@ -17,6 +17,7 @@ createRoot(document.getElementById('root')!).render(
                     </ProtectedRoute>
                 }></Route>
                 <Route path='/iniciar-sesion' Component={Login}></Route>
+                <Route path='/' Component={Login}></Route>
                 <Route path='/registro' Component={Register}></Route>
             </Routes>
         </UserContextProvider>
