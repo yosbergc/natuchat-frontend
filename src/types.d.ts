@@ -13,3 +13,9 @@ interface UserLogged {
 }
 
 export type User = UserLogged | null;
+
+export type UserContextType = {
+    user: User | null;
+    setUser: React.Dispatch<React.SetStateAction<User | null>> | null;
+    handleLogout: () => void;
+};

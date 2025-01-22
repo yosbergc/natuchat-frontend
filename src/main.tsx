@@ -7,16 +7,17 @@ import { ProtectedRoute } from './routes/ProtectedRoute/ProtectedRoute.tsx'
 import { UserContextProvider } from './context/UserContext.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
-createRoot(document.getElementById('root')!).render(<UserContextProvider>
+createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
-        <Routes>
-            <Route path='/chat' element={
-                <ProtectedRoute>
-                    <App />
-                </ProtectedRoute>
-            }></Route>
-            <Route path='/iniciar-sesion' Component={Login}></Route>
-            <Route path='/registro' Component={Register}></Route>
-        </Routes>
-    </BrowserRouter>
-</UserContextProvider>)
+        <UserContextProvider>
+            <Routes>
+                <Route path='/chat' element={
+                    <ProtectedRoute>
+                        <App />
+                    </ProtectedRoute>
+                }></Route>
+                <Route path='/iniciar-sesion' Component={Login}></Route>
+                <Route path='/registro' Component={Register}></Route>
+            </Routes>
+        </UserContextProvider>
+    </BrowserRouter>)
