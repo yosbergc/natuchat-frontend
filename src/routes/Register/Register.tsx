@@ -1,16 +1,16 @@
 import { Link } from "react-router"
-import './login.css'
-function Login() {
+function Register() {
     return (
         <main>
-            <form className="login-form">
+            <form className="register-form">
                 <input type="text" name="username" id="username" placeholder="Tu usuario" />
+                <input type="email" name="email" id="email" placeholder="Tu correo electrónico" />
                 <input type="password" name="password" id="password" placeholder="Tu contraseña" />
                 <button>Iniciar sesión</button>
 
-                <Link to='/registro'>Registrarme</Link>   
+                <Link to='/iniciar-sesion'>Iniciar sesión</Link>   
             </form>
         </main>
     )
 }
-export { Login }
+export { Register }

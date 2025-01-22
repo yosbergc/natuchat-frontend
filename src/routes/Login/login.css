@@ -1,0 +1,35 @@
+.login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    background-color: rgb(22, 21, 21);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+
+}
+.login-form input, .register-form input {
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 10px;
+    background: none;
+    border: 1px solid gray;
+    color: white;
+    border-radius: 4px;
+}
+
+.login-form button, .register-form button {
+    background-color: black;
+    border: 1px solid rgb(47, 45, 45);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+.login-form a, .register-form a {
+    color: white;
+    text-align: center;
+}
